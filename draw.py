@@ -93,7 +93,7 @@ def draw_group(ss, facts, convs, scale, label, x_label, tick_frequency=1):
     ss = np.array(ss)
     width = 0.2
     
-    figure, axis = plt.subplots(figsize=(2.5, 4.5))
+    figure, axis = plt.subplots(figsize=(5, 4.5))
 
     plt.yscale('log')
     #plt.xscale('log', subsx=[])
@@ -149,7 +149,7 @@ cms = [complexity.memory for complexity in cs]
 ccs = [complexity.compute for complexity in cs]
 
 draw_group(
-    ss, fms, cms, '', 'Memory', 'Input side length', tick_frequency=1
+    ss, fcs, ccs, '', 'Computation', 'Input side length', tick_frequency=1
 )
 
 plt.savefig("graph.png", dpi=400)
